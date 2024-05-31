@@ -20,7 +20,8 @@ const RoomJoin = () => {
             setId(id);
         }
         if (!id) fetchData();
-    },[id]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
 
     let handleUpdateRoomId = (e) => {
         setRoomId(e.target.value);
