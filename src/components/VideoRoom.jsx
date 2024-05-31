@@ -399,7 +399,7 @@ const VideoRoom = () => {
       </div>
       <div className="control-btn">
         <button
-          className={`videoControl ${isScreenSharing ? "danger-btn" : ""}`}
+          className={`videoControl ${isScreenSharing ? "danger-btn" : ""} screenshare`}
           onClick={handleScrenShareStateChange}
         >
           {isScreenSharing ? (

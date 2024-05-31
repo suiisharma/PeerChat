@@ -304,4 +304,7 @@ button:hover {
     .control-btn {
       width: 90%;
     }
+    .screenshare{
+      display: none;
+    }
   }
