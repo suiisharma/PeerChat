@@ -15,7 +15,7 @@ const RoomJoin = () => {
     useEffect(() => {
         
         let fetchData = async () => {
-            let response = await axios.get("https://peer-chat-server.vercel.app/create-room-id");
+            let response = await axios.get("https://peerchatserver.onrender.com/create-room-id");
             let id = response.data.id;
             setId(id);
         }
