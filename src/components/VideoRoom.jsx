@@ -315,6 +315,12 @@ const VideoRoom = () => {
     const reader = new FileReader();
     reader.onload = (e) => {
       const fileDataUrl = e.target.result;
+      const fileSizeInBytes = file.size;
+      const fileSizeInMB = fileSizeInBytes/(1024*1024);
+      if(fileSizeInMB>=261){
+        toast.error("File is too large!");
+        return ;
+      }
       // it contains the file as data url
       socket.emit("file",{roomJoinId, fileDataUrl, fileName: file.name });
       setMessages((prev) => {
